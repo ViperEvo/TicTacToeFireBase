@@ -10,6 +10,11 @@ import { Component, OnInit, Output } from '@angular/core';
 export class BoardComponent implements OnInit {
 
   constructor() { }
+  squares = Array(9).fill(null);
+
+  makeMove(position){
+    console.log(position);
+  }
 
   ngOnInit() {
 
