@@ -1,5 +1,5 @@
 import { SquareComponent } from './../square/square.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 
 @Component({
@@ -14,5 +14,4 @@ export class BoardComponent implements OnInit {
   ngOnInit() {
 
   }
-
 }
