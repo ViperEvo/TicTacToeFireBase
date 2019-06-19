@@ -1,5 +1,6 @@
 import { SquareComponent } from './../square/square.component';
 import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -10,9 +11,15 @@ import { Component, OnInit, Output } from '@angular/core';
 export class BoardComponent implements OnInit {
 
   constructor() { }
+
+  get status(){
+    return this.winner ? 'Winner: ' + this.winner : 'Current player: ' + this.player;
+  }
   squares = Array(9).fill(null);
   player = 'X';
-  winner = null;
+  winner = '';
+
+  @Output() winnerEmit = new EventEmitter<string>();
 
   newGame() {
     if (this.player === 'X')
@@ -27,15 +34,12 @@ export class BoardComponent implements OnInit {
     this.winner = null;
   }
 
-  get status(){
-    return this.winner ? 'Winner: ' + this.winner : 'Current player: ' + this.player;
-  }
-
   makeMove(position) {
     if (!this.winner && !this.squares[position]){
       this.squares[position] = this.player;
       if (this.winMove()){
         this.winner = this.player;
+        this.winnerEmit.emit(this.player);
       }
       this.player = this.player === 'X' ? 'O' : 'X';
     }

@@ -1,3 +1,12 @@
-<app-board></app-board>
-
+<app-board (winnerEmit)="addScore($event)"></app-board>
+<div>
+    <ul *ngFor="let score of scores | async">
+        <li>
+          {{score.winner}}
+          <br>
+          {{score.time}}
+        </li>
+      </ul>
+</div>
+<button (click)="addScore()">Add Score</button>
 <router-outlet></router-outlet>
