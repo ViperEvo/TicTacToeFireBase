@@ -2,10 +2,21 @@
 {
   clear: both;
 }
+#title
+{
+  position: relative;
+  font-size: 50px;
+  top: -25px;
+  text-align: center;
+  margin: 5px;
+  color: rgb(230, 230, 230);
+}
 #data
 {
   font-size: 30px;
   text-align: center;
+  color: rgb(230, 230, 230);
+  padding: 5px;
 }
 button
 {
@@ -13,7 +24,7 @@ button
   border-radius: 8px;
   font-size: 30px;
   padding: 6px 30px;
-  margin: 10px;
+  margin: 15px;
   border: 1px solid;
 }
 button:hover

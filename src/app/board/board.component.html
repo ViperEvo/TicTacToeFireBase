@@ -1,3 +1,4 @@
+<div id="title">TicTacToeFireList</div>
 <div class="row" *ngFor="let row of [0,1,2]">
   <app-square *ngFor="let col of [0,1,2]" [state] ="squares[col+row*3]" (click)="makeMove(col+row*3)"></app-square>
 </div>
