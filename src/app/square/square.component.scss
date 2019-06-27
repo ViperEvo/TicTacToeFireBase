@@ -1,10 +1,18 @@
 .span1
 {
-  width: 80px;
-  height: 80px;
-  border: solid 1px;
+  width: 180px;
+  height: 180px;
+  border: solid 3px;
   text-align: center;
   float: left;
-  font-size: 60px;
+  font-size: 150px;
+  margin: 1px;
+  border-radius: 8px;
+  background: linear-gradient(rgb(234, 224, 194) 5%, rgb(204, 194, 166) 100%) rgb(234, 224, 194);
+  cursor: pointer;
+}
+.span1:hover
+{
+  transform: scale(1.015);
 }
 

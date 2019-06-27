@@ -2,3 +2,21 @@
 {
   clear: both;
 }
+#data
+{
+  font-size: 30px;
+  text-align: center;
+}
+button
+{
+  background: linear-gradient(rgb(234, 224, 194) 5%, rgb(204, 194, 166) 100%) rgb(234, 224, 194);
+  border-radius: 8px;
+  font-size: 30px;
+  padding: 6px 30px;
+  margin: 10px;
+  border: 1px solid;
+}
+button:hover
+{
+  transform: scale(1.05);
+}

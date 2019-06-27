@@ -1,0 +1,32 @@
+#board
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#scores
+{
+  font-size: 25px;
+  height: 825px;
+  overflow: auto;
+  vertical-align: bottom;
+}
+#bodydiv
+{
+  font-family: 'Montserrat', sans-serif;
+}
+#scores ul
+{
+  background: linear-gradient(rgb(234, 224, 194) 5%, rgb(204, 194, 166) 100%) rgb(234, 224, 194);
+  width: 250px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+#scores ul:hover
+{
+  transform: scale(1.015);
+}
+
